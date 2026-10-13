@@ -1,0 +1,15 @@
+# Ficheiros temporários e de recuperação do Microsoft Office
+~$*
+*.tmp
+*.temp
+*.bak
+
+# Ficheiros temporários de editores
+*.swp
+*.swo
+*~
+
+# Ficheiros gerados pelo sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
