@@ -1,0 +1,31 @@
+﻿id;event_time;Computer;public_ip;action;process;process_uid;path;FileSHA256;remote_host;peer_ip;peer_country;remote_session_id;result;details
+E001;2026-10-14T09:42:30Z;PC02;198.51.100.22;ProcessStart;OUTLOOK.EXE;P-PC02;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;-;-;-;-;observed;-
+E002;2026-10-14T09:43:30Z;PC03;198.51.100.23;ProcessStart;OUTLOOK.EXE;P-PC03;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;-;-;-;-;observed;-
+E003;2026-10-14T09:44:30Z;PC04;198.51.100.24;ProcessStart;OUTLOOK.EXE;P-PC04;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;-;-;-;-;observed;-
+E004;2026-10-14T09:45:30Z;PC05;198.51.100.25;ProcessStart;OUTLOOK.EXE;P-PC05;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;-;-;-;-;observed;-
+E005;2026-10-14T09:47:00Z;PC07;198.51.100.27;SensorHeartbeat;-;-;-;-;-;-;-;-;healthy;-
+E006;2026-10-14T09:50:30Z;PC07;198.51.100.27;ProcessStart;OUTLOOK.EXE;P-OUT;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;-;-;-;-;observed;-
+E007;2026-10-14T10:00:10Z;PC07;198.51.100.27;FileCreate;OUTLOOK.EXE;P-OUT;C:/Temp/mensagem_recebida.eml;516950f5d265f2907cfee6d1b61c1c0506398545443bef6d6fe5082dc37dbbb0;-;-;-;-;observed;-
+E008;2026-10-14T10:02:00Z;PC07;198.51.100.27;FileOpen;OUTLOOK.EXE;P-OUT;C:/Temp/mensagem_recebida.eml;516950f5d265f2907cfee6d1b61c1c0506398545443bef6d6fe5082dc37dbbb0;-;-;-;-;observed;-
+E009;2026-10-14T10:03:00Z;PC07;198.51.100.27;FileCreate;OUTLOOK.EXE;P-OUT;C:/Temp/Procedimento_Manutencao_PC.txt;d5b0c6061530f00c192a8f5d89e7f880b0fd2dbd289261aca74a2f619c982c95;-;-;-;-;observed;-
+E010;2026-10-14T10:04:00Z;PC07;198.51.100.27;FileOpen;notepad.exe;P-NOTE;C:/Temp/Procedimento_Manutencao_PC.txt;d5b0c6061530f00c192a8f5d89e7f880b0fd2dbd289261aca74a2f619c982c95;-;-;-;-;observed;-
+E011;2026-10-14T10:05:30Z;PC02;198.51.100.22;NetworkConnect;OUTLOOK.EXE;P-PC02;-;-;outlook.office365.com:443;-;-;-;allowed;-
+E012;2026-10-14T10:06:00Z;PC07;198.51.100.27;SoftwareInstalled;AnyDesk.exe;-;C:/Program Files/AnyDesk/AnyDesk.exe;-;-;-;-;-;success;product=AnyDesk
+E013;2026-10-14T10:06:30Z;PC03;198.51.100.23;NetworkConnect;OUTLOOK.EXE;P-PC03;-;-;outlook.office365.com:443;-;-;-;allowed;-
+E014;2026-10-14T10:07:00Z;PC07;198.51.100.27;ProcessStart;AnyDesk.exe;P-AD;C:/Program Files/AnyDesk/AnyDesk.exe;-;-;-;-;-;observed;-
+E015;2026-10-14T10:07:30Z;PC04;198.51.100.24;NetworkConnect;OUTLOOK.EXE;P-PC04;-;-;outlook.office365.com:443;-;-;-;allowed;-
+E016;2026-10-14T10:08:00Z;PC07;198.51.100.27;ServiceStarted;AnyDesk.exe;P-AD;-;-;-;-;-;-;success;service=AnyDesk
+E017;2026-10-14T10:08:30Z;PC05;198.51.100.25;NetworkConnect;OUTLOOK.EXE;P-PC05;-;-;outlook.office365.com:443;-;-;-;allowed;-
+E018;2026-10-14T10:10:00Z;PC07;198.51.100.27;RemoteSessionStarted;AnyDesk.exe;P-AD;-;-;-;102.90.79.73;Nigeria;RA-014;accepted;origin=AnyDeskLocalTrace|transport=direct|access_mode=interactive_control
+E019;2026-10-14T10:11:00Z;PC07;198.51.100.27;ProcessStart;msedge.exe;P-BROWSER;C:/Program Files/Microsoft/Edge/msedge.exe;-;-;-;-;-;observed;-
+E020;2026-10-14T10:12:00Z;PC07;198.51.100.27;NetworkConnect;msedge.exe;P-BROWSER;-;-;login.microsoftonline.com:443;-;-;-;allowed;-
+E021;2026-10-14T10:15:00Z;PC07;198.51.100.27;FileCreate;msedge.exe;P-BROWSER;C:/Temp/Financeiro/Fatura_2026_001.pdf;-;-;-;-;-;observed;observed_file_size=201000
+E022;2026-10-14T10:21:40Z;PC07;198.51.100.27;FileCreate;msedge.exe;P-BROWSER;C:/Temp/Financeiro/Recibo_2026_001.pdf;-;-;-;-;-;observed;observed_file_size=151000
+E023;2026-10-14T10:25:30Z;PC02;198.51.100.22;ProcessStop;OUTLOOK.EXE;P-PC02;-;-;-;-;-;-;observed;-
+E024;2026-10-14T10:26:30Z;PC03;198.51.100.23;ProcessStop;OUTLOOK.EXE;P-PC03;-;-;-;-;-;-;observed;-
+E025;2026-10-14T10:28:20Z;PC07;198.51.100.27;FileCreate;msedge.exe;P-BROWSER;C:/Temp/Financeiro/Extrato_Conta_2026_001.xlsx;-;-;-;-;-;observed;observed_file_size=801000
+E026;2026-10-14T10:31:30Z;PC07;198.51.100.27;FileCreate;msedge.exe;P-BROWSER;C:/Temp/Financeiro/Mapa_Pagamentos_Fornecedores_2026_010.xlsx;-;-;-;-;-;observed;observed_file_size=610000
+E027;2026-10-14T10:33:30Z;PC07;198.51.100.27;RemoteSessionActivity;AnyDesk.exe;P-AD;-;-;-;102.90.79.73;Nigeria;RA-014;observed;origin=AnyDeskLocalTrace|activity=interactive_control_active
+E028;2026-10-14T10:34:00Z;PC07;198.51.100.27;DeviceIsolationRequested;-;-;-;-;-;-;-;-;pending;actor=SOC|ticket=INC-2026-014
+E029;2026-10-14T10:34:05Z;PC07;198.51.100.27;DeviceIsolated;-;-;-;-;-;-;-;-;success;actor=SOC|ticket=INC-2026-014
+E030;2026-10-14T10:34:06Z;PC07;198.51.100.27;RemoteSessionEnded;AnyDesk.exe;P-AD;-;-;-;102.90.79.73;Nigeria;RA-014;closed;origin=AnyDeskLocalTrace|reason=device_isolated

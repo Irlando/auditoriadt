@@ -1,0 +1,31 @@
+﻿id;event_time;Computer;action;process;process_uid;path;remote_host;result;FileSHA256
+E001;2026-10-13T08:40:25Z;PC02;SensorHeartbeat;-;-;-;-;healthy;-
+E002;2026-10-13T08:40:30Z;PC02;ProcessStart;explorer.exe;PR-PC02-01;C:/Windows/explorer.exe;-;observed;-
+E003;2026-10-13T08:41:25Z;PC03;SensorHeartbeat;-;-;-;-;healthy;-
+E004;2026-10-13T08:41:30Z;PC03;ProcessStart;explorer.exe;PR-PC03-01;C:/Windows/explorer.exe;-;observed;-
+E005;2026-10-13T08:42:25Z;PC04;SensorHeartbeat;-;-;-;-;healthy;-
+E006;2026-10-13T08:42:30Z;PC04;ProcessStart;explorer.exe;PR-PC04-01;C:/Windows/explorer.exe;-;observed;-
+E007;2026-10-13T08:43:25Z;PC05;SensorHeartbeat;-;-;-;-;healthy;-
+E008;2026-10-13T08:43:30Z;PC05;ProcessStart;explorer.exe;PR-PC05-01;C:/Windows/explorer.exe;-;observed;-
+E009;2026-10-13T08:43:50Z;PC07;SensorHeartbeat;-;-;-;-;healthy;-
+E010;2026-10-13T08:44:25Z;PC07;ProcessStart;explorer.exe;PR-ER01;C:/Windows/explorer.exe;-;observed;-
+E011;2026-10-13T08:45:00Z;PC07;ProcessStart;OUTLOOK.EXE;PR-ER02;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;observed;-
+E012;2026-10-13T08:47:10Z;PC02;ProcessStart;OUTLOOK.EXE;PR-PC02-02;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;observed;-
+E013;2026-10-13T08:48:10Z;PC03;ProcessStart;OUTLOOK.EXE;PR-PC03-02;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;observed;-
+E014;2026-10-13T08:50:10Z;PC05;ProcessStart;OUTLOOK.EXE;PR-PC05-02;C:/Program Files/Microsoft Office/OUTLOOK.EXE;-;observed;-
+E015;2026-10-13T09:01:00Z;PC04;ProcessStart;powershell.exe;PR-PC04-02;C:/Scripts/InventarioDiario.ps1;-;observed;-
+E016;2026-10-13T09:01:05Z;PC04;NetworkConnect;powershell.exe;PR-PC04-02;-;inventario.interno.invalid:443;allowed;-
+E017;2026-10-13T09:02:30Z;PC02;NetworkConnect;OUTLOOK.EXE;PR-PC02-02;-;outlook.office365.com:443;allowed;-
+E018;2026-10-13T09:03:00Z;PC04;ProcessStop;powershell.exe;PR-PC04-02;-;-;observed;-
+E019;2026-10-13T09:03:30Z;PC03;NetworkConnect;OUTLOOK.EXE;PR-PC03-02;-;outlook.office365.com:443;allowed;-
+E020;2026-10-13T09:05:30Z;PC05;NetworkConnect;OUTLOOK.EXE;PR-PC05-02;-;outlook.office365.com:443;allowed;-
+E021;2026-10-13T09:06:00Z;PC07;FileCreate;OUTLOOK.EXE;PR-ER02;C:/Temp/mensagem_recebida.eml;-;observed;30cfca0a6690f84db0f46e3de4ffe59a31e8e1aa5b5b3ff0f260f8b246e853c6
+E022;2026-10-13T09:07:00Z;PC07;FileOpen;OUTLOOK.EXE;PR-ER02;C:/Temp/mensagem_recebida.eml;-;observed;30cfca0a6690f84db0f46e3de4ffe59a31e8e1aa5b5b3ff0f260f8b246e853c6
+E023;2026-10-13T09:07:10Z;PC07;NetworkConnect;OUTLOOK.EXE;PR-ER02;-;outlook.office365.com:443;allowed;-
+E024;2026-10-13T09:08:00Z;PC07;ProcessStart;msedge.exe;PR-ER03;C:/Program Files/Microsoft/Edge/msedge.exe;-;observed;-
+E025;2026-10-13T09:08:10Z;PC07;NetworkConnect;msedge.exe;PR-ER03;-;login.microsoftonline.com:443;allowed;-
+E026;2026-10-13T09:30:00Z;PC07;ProcessStop;OUTLOOK.EXE;PR-ER02;-;-;observed;-
+E027;2026-10-13T09:31:00Z;PC02;ProcessStop;OUTLOOK.EXE;PR-PC02-02;-;-;observed;-
+E028;2026-10-13T09:32:00Z;PC03;ProcessStop;OUTLOOK.EXE;PR-PC03-02;-;-;observed;-
+E029;2026-10-13T09:34:00Z;PC05;ProcessStop;OUTLOOK.EXE;PR-PC05-02;-;-;observed;-
+E030;2026-10-13T09:40:00Z;PC07;SensorHeartbeat;-;-;-;-;healthy;-

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Relatório de incidente INC-2026-014, com cronologia, impacto, medidas aplicadas, recomendações e hashes SHA-256.">
+  <title>Relatório de Incidente — INC-2026-014</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #586579;
+      --line: #d8e0ea;
+      --paper: #fff;
+      --canvas: #f2f5f9;
+      --accent: #174a7e;
+      --accent-soft: #eaf2fa;
+      --warning: #8c4b08;
+      --warning-soft: #fff4df;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(100% - 32px, 1080px);
+      margin: 40px auto;
+      padding: clamp(24px, 5vw, 64px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgb(23 32 51 / 7%);
+    }
+
+    header {
+      padding-bottom: 28px;
+      border-bottom: 3px solid var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 750;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { margin: 0 0 18px; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 {
+      margin: 42px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+    h3 { margin: 26px 0 10px; font-size: 1.12rem; }
+    p { margin: 0 0 14px; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: 0 0 8px; }
+
+    .metadata {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px 24px;
+      margin: 0;
+    }
+    .metadata div { min-width: 0; }
+    .metadata dt {
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .metadata dd { margin: 2px 0 0; font-weight: 600; }
+
+    .notice {
+      margin: 22px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--warning);
+      border-radius: 4px;
+      background: var(--warning-soft);
+    }
+
+    .summary {
+      padding: 20px;
+      border: 1px solid #c9d9e9;
+      border-radius: 8px;
+      background: var(--accent-soft);
+    }
+
+    .table-wrap { margin: 18px 0 24px; overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .94rem;
+    }
+    caption {
+      padding: 0 0 8px;
+      color: var(--muted);
+      text-align: left;
+      font-weight: 650;
+    }
+    th, td {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #edf2f7; }
+    tbody tr:nth-child(even) { background: #f8fafc; }
+
+    code {
+      padding: .12em .35em;
+      border-radius: 4px;
+      background: #eef1f5;
+      font: .9em ui-monospace, SFMono-Regular, Consolas, monospace;
+      overflow-wrap: anywhere;
+    }
+    .hash { word-break: break-all; }
+    footer {
+      margin-top: 44px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    @media (max-width: 600px) {
+      main { width: 100%; margin: 0; padding: 24px 18px; border: 0; border-radius: 0; }
+      body { font-size: 15px; }
+      th, td { padding: 8px; }
+    }
+
+    @media print {
+      @page { margin: 16mm; }
+      body { background: #fff; font-size: 10.5pt; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      h2, h3 { break-after: avoid; }
+      tr, .notice, .summary { break-inside: avoid; }
+      .table-wrap { overflow: visible; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Relatório de incidente</p>
+      <h1>INC-2026-014</h1>
+      <dl class="metadata">
+        <div><dt>Data do incidente</dt><dd>14/10/2026</dd></div>
+        <div><dt>Período analisado</dt><dd>14/10/2026, 09:40–10:40 UTC</dd></div>
+        <div><dt>Ativo principal</dt><dd>PC07 (198.51.100.27), utilizador Erick</dd></div>
+        <div><dt>Classificação</dt><dd>Acesso remoto não autorizado, com potencial exposição de informação financeira</dd></div>
+        <div><dt>Estado</dt><dd>Contenção registada; investigação de impacto e recuperação ainda necessárias</dd></div>
+      </dl>
+    </header>
+
+    <section aria-labelledby="resumo">
+      <h2 id="resumo">1. Resumo executivo</h2>
+      <div class="summary">
+        <p>Os registos analisados descrevem uma campanha de engenharia social dirigida ao utilizador Erick. Uma mensagem que se fazia passar por uma equipa de manutenção urgente instruiu-o a instalar o AnyDesk, aceitar uma ligação remota e manter abertas as sessões do Windows e do Microsoft 365. O EDR regista a instalação e o início do serviço AnyDesk no PC07, seguidos de uma sessão de controlo interativo aceite às 10:10 UTC, com origem indicada como <code>102.90.79.73</code> (Nigéria).</p>
+        <p>Durante a sessão, a conta <code>erick@visionware.pt</code> usou uma sessão Microsoft 365 diferente da sessão inicial e descarregou <strong>100 ficheiros financeiros do SharePoint</strong>, entre as 10:15:00 e as 10:31:30 UTC. Os registos indicam <strong>28 750 000 bytes</strong> (cerca de 27,4 MiB). O EDR confirma a criação local de quatro dos ficheiros descarregados. Estes eventos demonstram acesso e download para a sessão/estação, mas <strong>não demonstram, por si só, que os ficheiros tenham sido enviados para o operador externo</strong>.</p>
+        <p>O SOC isolou o PC07 às 10:34:05 UTC; a sessão AnyDesk terminou um segundo depois. Às 10:35 UTC foram revogadas as sessões de início de sessão da conta e, às 10:36 UTC, a conta foi desativada. Não há, no material analisado, evidência de execução de malware, persistência para além do serviço AnyDesk, transferência dos ficheiros para um destino externo, ou atividade posterior à contenção. A ausência de registo não prova que essas ações não tenham ocorrido.</p>
+      </div>
+      <aside class="notice"><strong>Nota de contexto:</strong> o anexo da mensagem declara explicitamente que o exercício é fictício e que não contém software executável. Os endereços <code>198.51.100.x</code> pertencem a um bloco reservado para documentação e os dados parecem sanitizados/de formação. Por conseguinte, este relatório descreve a narrativa evidenciada no conjunto fornecido; não deve ser tratado como confirmação de um incidente real nem os indicadores como infraestrutura operacional.</aside>
+    </section>
+
+    <section aria-labelledby="ambito">
+      <h2 id="ambito">2. Âmbito e metodologia</h2>
+      <p>Foram analisados os ficheiros existentes em <code>2-13.10</code>:</p>
+      <ul>
+        <li><code>EDR.log</code> — processos, ficheiros, rede, sessão remota e isolamento;</li>
+        <li><code>M365.log</code> — autenticação, acessos e downloads do Microsoft 365/SharePoint;</li>
+        <li><code>PC_Security.log</code> — eventos de autenticação Windows;</li>
+        <li><code>mensagem_recebida.eml</code> — cabeçalhos, texto da mensagem e anexo codificado.</li>
+      </ul>
+      <p>Os horários abaixo são apresentados em <strong>UTC</strong>, conforme o sufixo <code>Z</code> dos registos. O período de 09:40–10:40 UTC corresponde à primeira e última atividade relevante disponível no conjunto; não representa necessariamente a duração total do incidente. A avaliação cruza os eventos pelos horários, utilizador, estação e objetos registados.</p>
+    </section>
+
+    <section aria-labelledby="cronologia">
+      <h2 id="cronologia">3. Cronologia reconstruída</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Eventos observados em 14 de outubro de 2026 (UTC)</caption>
+          <thead><tr><th scope="col">Data/hora (UTC)</th><th scope="col">Evidência e interpretação</th></tr></thead>
+          <tbody>
+            <tr><td>09:40–09:44</td><td><code>PC_Security.log</code> regista, em cinco estações (PC02–PC07), um evento de falha de início de sessão Windows (4625) seguido de sucesso (4624, tipo 2) 20 segundos depois. Isoladamente, esta sequência não demonstra atividade maliciosa nem permite associá-la ao operador remoto.</td></tr>
+            <tr><td>09:46–09:50</td><td>O M365 regista logins dos cinco utilizadores a partir de IPs indicados como Portugal, com MFA aceite. Para Erick, este login corresponde à sessão <code>S-ER01</code>.</td></tr>
+            <tr><td>10:00</td><td>É entregue a Erick a mensagem “Manutenção obrigatória do PC”, de <code>ator_malicioso@onion</code>, com o anexo <code>Procedimento_Manutencao_PC.txt</code>. A mensagem cria urgência e pede que o utilizador instale AnyDesk, aceite a ligação e mantenha o Microsoft 365 aberto.</td></tr>
+            <tr><td>10:02–10:04</td><td>O M365 regista acesso à mensagem; o EDR regista a abertura do e-mail e a criação/abertura do procedimento no PC07.</td></tr>
+            <tr><td>10:06–10:08</td><td>O AnyDesk é instalado, iniciado e registado como serviço no PC07.</td></tr>
+            <tr><td>10:10</td><td>É aceite a sessão remota AnyDesk <code>RA-014</code>, em modo de controlo interativo, com peer IP <code>102.90.79.73</code>, geolocalizado no registo como Nigéria. A geolocalização, por si só, não identifica a pessoa nem comprova a origem física.</td></tr>
+            <tr><td>10:11–10:14</td><td>É iniciado o Edge; o EDR regista ligação a <code>login.microsoftonline.com</code>. Às 10:12, o M365 regista novo login de Erick (<code>S-ER02</code>), com <code>mfa=not_recorded</code>, seguido de acesso a documentos financeiros. A ausência de registo de MFA não prova que o MFA tenha sido contornado.</td></tr>
+            <tr><td>10:15–10:21:30</td><td>O M365 regista download de <strong>40 faturas</strong> (8 820 000 bytes no total). O EDR regista no PC07 a criação local de <code>Fatura_2026_001.pdf</code> (201 000 bytes).</td></tr>
+            <tr><td>10:21:40–10:24:50</td><td>O M365 regista download de <strong>20 recibos</strong> (3 210 000 bytes). O EDR regista a criação local de <code>Recibo_2026_001.pdf</code> (151 000 bytes).</td></tr>
+            <tr><td>10:25:00–10:28:10</td><td>O M365 regista download de <strong>20 notas de crédito</strong> (2 610 000 bytes).</td></tr>
+            <tr><td>10:28:20–10:29:50</td><td>O M365 regista download de <strong>10 extratos</strong> (8 055 000 bytes). O EDR regista a criação local de <code>Extrato_Conta_2026_001.xlsx</code> (801 000 bytes).</td></tr>
+            <tr><td>10:30:00–10:31:30</td><td>O M365 regista download de <strong>10 mapas de pagamentos</strong> (6 055 000 bytes). O EDR regista a criação local de <code>Mapa_Pagamentos_Fornecedores_2026_010.xlsx</code> (610 000 bytes).</td></tr>
+            <tr><td>10:33:00–10:33:30</td><td>O M365 regista novo acesso à mensagem por Erick; o EDR confirma atividade de controlo interativo AnyDesk ainda ativa.</td></tr>
+            <tr><td>10:34:00–10:34:06</td><td>O SOC solicita o isolamento do PC07 às 10:34:00; o isolamento tem sucesso às 10:34:05. A sessão AnyDesk termina às 10:34:06, com motivo <code>device_isolated</code>.</td></tr>
+            <tr><td>10:35–10:36</td><td>O M365 regista a revogação das sessões de Erick (concluída) e a desativação da conta, ambas associadas ao ticket <code>INC-2026-014</code>.</td></tr>
+            <tr><td>10:38–10:40</td><td>Surgem eventos de rotina de outro utilizador; no registo disponível não há atividade posterior de Erick nem da sessão remota.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="impacto">
+      <h2 id="impacto">4. Impacto observado e limites da evidência</h2>
+      <h3>Acessos e transferências registados</h3>
+      <p>O M365 regista <strong>100 operações <code>FileDownloaded</code> bem-sucedidas</strong>, todas associadas à conta <code>erick@visionware.pt</code>, à sessão <code>S-ER02</code> e ao IP cliente <code>198.51.100.27</code>:</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Downloads por categoria</caption>
+          <thead><tr><th scope="col">Categoria</th><th scope="col">Ficheiros</th><th scope="col">Bytes registados</th></tr></thead>
+          <tbody>
+            <tr><td>Faturas</td><td>40</td><td>8 820 000</td></tr>
+            <tr><td>Recibos</td><td>20</td><td>3 210 000</td></tr>
+            <tr><td>Notas de crédito</td><td>20</td><td>2 610 000</td></tr>
+            <tr><td>Extratos</td><td>10</td><td>8 055 000</td></tr>
+            <tr><td>Mapas de pagamentos</td><td>10</td><td>6 055 000</td></tr>
+            <tr><th scope="row">Total</th><th>100</th><th>28 750 000</th></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>O EDR regista quatro ficheiros financeiros criados localmente no PC07, coincidentes em nome e tamanho com quatro operações M365. Os restantes 96 downloads constam do M365, mas a sua criação local não está demonstrada pelos eventos EDR fornecidos.</p>
+
+      <h3>O que não é possível concluir</h3>
+      <ul>
+        <li>Não há nos registos fornecidos evento de upload, envio por e-mail, cópia para armazenamento externo ou outro comprovativo de exfiltração para o operador.</li>
+        <li>A sessão de controlo remoto interativo e os downloads em sequência tornam plausível a exposição dos documentos ao operador, mas <strong>não provam que este os tenha recebido ou conservado</strong>.</li>
+        <li>Não há inventário do conteúdo ou classificação dos documentos; o potencial impacto financeiro/privacidade deve ser confirmado com os proprietários da informação.</li>
+        <li>O login M365 <code>S-ER02</code> usa o IP local indicado como Portugal, enquanto o AnyDesk identifica um peer nigeriano. Os registos não demonstram que o login M365 tenha sido feito a partir desse peer.</li>
+        <li>Os eventos Windows de outras estações e contas não permitem confirmar, com esta evidência, comprometimento adicional.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="medidas">
+      <h2 id="medidas">5. Medidas aplicadas (evidenciadas)</h2>
+      <ol>
+        <li><strong>Isolamento do PC07 pelo SOC</strong> solicitado às 10:34:00 e concluído com sucesso às 10:34:05 UTC, no ticket <code>INC-2026-014</code>.</li>
+        <li><strong>Terminação da sessão AnyDesk</strong> às 10:34:06 UTC em consequência do isolamento.</li>
+        <li><strong>Revogação das sessões de início de sessão de Erick</strong> às 10:35 UTC, com estado <code>completed</code>.</li>
+        <li><strong>Desativação da conta de Erick</strong> às 10:36 UTC (<code>account_enabled=false</code>).</li>
+      </ol>
+      <p>Não há evidência nos ficheiros de que tenham sido efetuadas outras ações de resposta, como reimagem do endpoint, redefinição da palavra-passe, análise forense ou notificação dos titulares dos dados. Estas ações não devem ser consideradas concluídas sem confirmação independente.</p>
+    </section>
+
+    <section aria-labelledby="recomendacoes">
+      <h2 id="recomendacoes">6. Recomendações futuras</h2>
+      <h3>Prioridade imediata</h3>
+      <ol>
+        <li>Manter PC07 isolado e preservar uma imagem forense, memória disponível, registos do AnyDesk, artefactos do navegador e evidências Microsoft 365 antes de qualquer limpeza ou reinstalação.</li>
+        <li>Alterar a palavra-passe de Erick por canal confiável, verificar métodos de autenticação/MFA e rever sessões, tokens, aplicações OAuth, regras de caixa de correio e métodos de recuperação. Reativar a conta apenas após validação do SOC.</li>
+        <li>Confirmar com os responsáveis de SharePoint e finanças a identidade, sensibilidade e âmbito dos 100 ficheiros; verificar acessos posteriores, partilhas, sincronizações e eventuais alterações ou pagamentos relacionados.</li>
+        <li>Procurar no tenant e nos endpoints a mesma mensagem, remetente, assunto, anexos, instalação/execução do AnyDesk e indicadores associados; confirmar se outros utilizadores receberam ou seguiram instruções semelhantes.</li>
+        <li>Determinar se ocorreu qualquer transferência para fora do ambiente através dos registos de rede, proxy, DNS, firewall, telemetria EDR e registos locais do AnyDesk. Preservar os resultados e atualizar a avaliação de impacto.</li>
+        <li>Aplicar o processo de notificação interna, jurídica e de privacidade caso a análise confirme exposição de dados pessoais ou informação regulada.</li>
+      </ol>
+      <h3>Reforço preventivo</h3>
+      <ul>
+        <li>Restringir a instalação e execução de ferramentas de acesso remoto a software aprovado; bloquear ou exigir autorização administrativa para ferramentas não geridas.</li>
+        <li>Exigir MFA resistente a phishing e rever políticas de acesso condicional, gestão de sessões e autenticação para SharePoint/Microsoft 365.</li>
+        <li>Configurar alertas para downloads em massa, sequências anómalas de ficheiros financeiros e criação de sessões em dispositivos não conformes.</li>
+        <li>Reforçar a filtragem de e-mail, análise de anexos e deteção de domínios/remetentes suspeitos, sem depender apenas de indicadores facilmente alteráveis.</li>
+        <li>Reforçar formação e procedimentos: pedidos de manutenção devem ser validados por um canal independente; utilizadores não devem instalar ferramentas nem aceitar ligações remotas a pedido de mensagens inesperadas.</li>
+        <li>Rever a cobertura e sincronização temporal de EDR, Windows e auditoria M365, para que eventos de autenticação, atividade remota e operações de ficheiros possam ser correlacionados.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="integridade">
+      <h2 id="integridade">7. Integridade dos registos — SHA-256</h2>
+      <p>Hashes calculados sobre os ficheiros de log originais existentes em <code>2-13.10</code>. Estes valores identificam o conteúdo no momento da análise; não substituem uma cadeia de custódia formal.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Hashes SHA-256 dos ficheiros de log</caption>
+          <thead><tr><th scope="col">Ficheiro</th><th scope="col">SHA-256</th></tr></thead>
+          <tbody>
+            <tr><td><code>EDR.log</code></td><td class="hash"><code>082DBA6F7620B487889346630BD08C50B73927BC39020140EF62DFCC0FBAD635</code></td></tr>
+            <tr><td><code>M365.log</code></td><td class="hash"><code>BB5B1AA211BD625BB998557F1806C6626A45CBB2152CB0405AFD392300188B0C</code></td></tr>
+            <tr><td><code>PC_Security.log</code></td><td class="hash"><code>D7A296BFC85A7A2164DB83338383735AAF53BA3C1086BA5D0130866BDA60FA5D</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="conclusao">
+      <h2 id="conclusao">8. Conclusão</h2>
+      <p>A evidência suporta uma sequência de engenharia social que levou à instalação e utilização de acesso remoto interativo no PC07, seguida de uma sessão Microsoft 365 de Erick que descarregou 100 documentos financeiros. O endpoint e a conta foram contidos por isolamento, revogação de sessões e desativação da conta. A extensão da possível exposição está confirmada em termos de ficheiros descarregados no tenant, mas a exfiltração externa, a visualização pelo operador e o impacto final permanecem por determinar. A investigação deve continuar com preservação forense e validação independente dos registos e documentos afetados.</p>
+    </section>
+
+    <footer>
+      Relatório elaborado a partir das evidências fornecidas na pasta 2-13.10. Horários apresentados em UTC.
+    </footer>
+  </main>
+</body>
+</html>

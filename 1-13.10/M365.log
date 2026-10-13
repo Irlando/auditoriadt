@@ -1,0 +1,31 @@
+﻿id;event_time;user;operation;result;client_ip;country;session_id;message_id;sender;recipient;subject;rule_id;details
+M001;2026-10-13T08:46:00Z;erick@visionware.pt;UserLoggedIn;success;203.0.113.10;Portugal;S-ER01;-;-;-;-;-;mfa=accepted
+M002;2026-10-13T08:47:00Z;jaime@visionware.pt;UserLoggedIn;success;203.0.113.10;Portugal;S-J01;-;-;-;-;-;mfa=accepted
+M003;2026-10-13T08:48:00Z;filipa@visionware.pt;UserLoggedIn;success;203.0.113.10;Portugal;S-F01;-;-;-;-;-;mfa=accepted
+M004;2026-10-13T08:49:00Z;pedro@visionware.pt;UserLoggedIn;success;203.0.113.20;Portugal;S-P01;-;-;-;-;-;mfa=accepted
+M005;2026-10-13T08:50:00Z;ana@visionware.pt;UserLoggedIn;success;203.0.113.10;Portugal;S-A01;-;-;-;-;-;mfa=accepted
+M006;2026-10-13T08:53:00Z;erick@visionware.pt;MailItemsAccessed;success;203.0.113.10;Portugal;S-ER01;<REL-081@formacao.invalid>;-;-;Relatorio semanal;-;access_type=Bind
+M007;2026-10-13T08:54:00Z;jaime@visionware.pt;Send;success;203.0.113.10;Portugal;S-J01;<ROT-001@formacao.invalid>;jaime@visionware.pt;equipa01@formacao.invalid;Reuniao de equipa;-;-
+M008;2026-10-13T08:55:00Z;filipa@visionware.pt;New-InboxRule;success;203.0.113.10;Portugal;S-F01;-;-;-;-;R-F01;name=Faturas|subject_contains=Fatura|move_to=Financeiro|mark_as_read=false|enabled=true
+M009;2026-10-13T08:56:00Z;ana@visionware.pt;FileAccessed;success;203.0.113.10;Portugal;S-A01;-;-;-;-;-;object=Calendario_equipa.pdf
+M010;2026-10-13T09:02:00Z;pedro@visionware.pt;Send;success;203.0.113.20;Portugal;S-P01;<ROT-002@formacao.invalid>;pedro@visionware.pt;equipa02@formacao.invalid;Inventario concluido;-;-
+M011;2026-10-13T09:05:00Z;erick@visionware.pt;MailDelivered;success;-;-;-;<MSG-20261013-0905@onion>;ator_malicioso@onion;erick@visionware.pt;Validacao obrigatoria da conta - 13/10/2026;-;message_trace=delivered
+M012;2026-10-13T09:07:00Z;erick@visionware.pt;MailItemsAccessed;success;203.0.113.10;Portugal;S-ER01;<MSG-20261013-0905@onion>;-;-;Validacao obrigatoria da conta - 13/10/2026;-;access_type=Bind
+M013;2026-10-13T09:10:00Z;jaime@visionware.pt;MailItemsAccessed;success;203.0.113.10;Portugal;S-J01;<ROT-003@formacao.invalid>;-;-;Agenda semanal;-;access_type=Bind
+M014;2026-10-13T09:11:30Z;erick@visionware.pt;UserLoginFailed;failure;102.90.79.73;Nigeria;-;-;-;-;-;-;reason=invalid_password
+M015;2026-10-13T09:12:00Z;erick@visionware.pt;UserLoggedIn;success;102.90.79.73;Nigeria;S-ER99;-;-;-;-;-;mfa=not_recorded
+M016;2026-10-13T09:13:00Z;erick@visionware.pt;MailItemsAccessed;success;102.90.79.73;Nigeria;S-ER99;<MSG-20261013-0905@onion>;-;-;Validacao obrigatoria da conta - 13/10/2026;-;access_type=Bind
+M017;2026-10-13T09:14:00Z;erick@visionware.pt;New-InboxRule;success;102.90.79.73;Nigeria;S-ER99;-;-;-;-;R-ER09;name=Arquivo|subject_contains=Validacao obrigatoria da conta - 13/10/2026|move_to=DeletedItems|mark_as_read=true|stop_processing=true|enabled=true
+M018;2026-10-13T09:16:00Z;erick@visionware.pt;Send;success;102.90.79.73;Nigeria;S-ER99;<ENV-001@formacao.invalid>;erick@visionware.pt;colaborador01@formacao.invalid;Validacao obrigatoria da conta - 13/10/2026;-;-
+M019;2026-10-13T09:17:00Z;erick@visionware.pt;Send;success;102.90.79.73;Nigeria;S-ER99;<ENV-002@formacao.invalid>;erick@visionware.pt;colaborador02@formacao.invalid;Validacao obrigatoria da conta - 13/10/2026;-;-
+M020;2026-10-13T09:17:30Z;jaime@visionware.pt;Send;success;203.0.113.10;Portugal;S-J01;<ROT-004@formacao.invalid>;jaime@visionware.pt;equipa03@formacao.invalid;Ata da reuniao;-;-
+M021;2026-10-13T09:18:00Z;erick@visionware.pt;Send;success;102.90.79.73;Nigeria;S-ER99;<ENV-003@formacao.invalid>;erick@visionware.pt;colaborador03@formacao.invalid;Validacao obrigatoria da conta - 13/10/2026;-;-
+M022;2026-10-13T09:19:00Z;erick@visionware.pt;Send;success;102.90.79.73;Nigeria;S-ER99;<ENV-004@formacao.invalid>;erick@visionware.pt;colaborador04@formacao.invalid;Validacao obrigatoria da conta - 13/10/2026;-;-
+M023;2026-10-13T09:20:00Z;erick@visionware.pt;Send;success;102.90.79.73;Nigeria;S-ER99;<ENV-005@formacao.invalid>;erick@visionware.pt;colaborador05@formacao.invalid;Validacao obrigatoria da conta - 13/10/2026;-;-
+M024;2026-10-13T09:21:00Z;filipa@visionware.pt;MailItemsAccessed;success;203.0.113.10;Portugal;S-F01;<FAT-001@formacao.invalid>;-;-;Fatura mensal;-;access_type=Bind
+M025;2026-10-13T09:23:00Z;erick@visionware.pt;UserLoggedIn;success;203.0.113.10;Portugal;S-ER02;-;-;-;-;-;mfa=accepted
+M026;2026-10-13T09:24:00Z;erick@visionware.pt;MailItemsAccessed;success;203.0.113.10;Portugal;S-ER02;<REL-082@formacao.invalid>;-;-;Relatorio de atividade;-;access_type=Bind
+M027;2026-10-13T09:25:00Z;pedro@visionware.pt;FileAccessed;success;203.0.113.20;Portugal;S-P01;-;-;-;-;-;object=Inventario_aprovado.pdf
+M028;2026-10-13T09:27:00Z;ana@visionware.pt;Send;success;203.0.113.10;Portugal;S-A01;<ROT-005@formacao.invalid>;ana@visionware.pt;equipa04@formacao.invalid;Disponibilidade para reuniao;-;-
+M029;2026-10-13T09:32:00Z;erick@visionware.pt;MailItemsAccessed;success;203.0.113.10;Portugal;S-ER02;<REL-083@formacao.invalid>;-;-;Relatorio operacional;-;access_type=Bind
+M030;2026-10-13T09:35:00Z;jaime@visionware.pt;MailDelivered;success;-;-;-;<ROT-006@formacao.invalid>;equipa05@formacao.invalid;jaime@visionware.pt;Convite para reuniao;-;message_trace=delivered
